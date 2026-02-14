@@ -1,0 +1,10 @@
+* 7c933dd 2-way merging
+*   c474d0d merge conflict solved
+|\  
+| * 0597d9e in branch1
+* | 8556509 before merge from master
+|/  
+* 90105de Revert "commit 3.1"
+* debee5f commit 3.1
+* 92ded3e commit 2
+* f6f73f3 commit 1

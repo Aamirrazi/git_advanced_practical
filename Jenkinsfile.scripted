@@ -1,0 +1,22 @@
+node {
+    
+    properties([
+        pipelineTriggers([
+            upstream(upstreamProjects: 'Declarative-Job', threshold: hudson.model.Result.SUCCESS)
+        ])
+    ])
+
+    stage('Clone Repository') {
+        git branch: 'master', url: 'https://github.com/Aamirrazi/git-advanced-practical.git'
+    }
+    stage('Build') {
+        echo 'Running Scripted Build...'
+    }
+    stage('Echo Status') {
+        echo 'Scripted Pipeline Completed Successfully.'
+    }
+    stage('Archive') {
+        sh 'echo "Scripted Artifact" > scripted_artifact.txt'
+        archiveArtifacts artifacts: 'scripted_artifact.txt', fingerprint: true
+    }
+}
