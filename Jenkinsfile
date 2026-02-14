@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
 		steps { 	
-                git branch: 'master', url: 'https://github.com/Aamirrazi/git-advanced-practical.git'
+                git branch: 'master', url: 'https://github.com/Aamirrazi/git_advanced_practical.git'
             }
         }
         stage('Build') {
