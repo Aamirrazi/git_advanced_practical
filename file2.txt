@@ -1,2 +1,3 @@
 in merging task from master after merge
 
+Small change
