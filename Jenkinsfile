@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'echo "Building Project..."' 
+                bat 'echo "Building Project..."' 
  
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Archive Artifacts') {
             steps {
-                 sh 'echo "Build Log Artifact" > build_artifact.log'
+                 bat 'echo "Build Log Artifact" > build_artifact.log'
                 archiveArtifacts artifacts: 'build_artifact.log', fingerprint: true
             }
         }

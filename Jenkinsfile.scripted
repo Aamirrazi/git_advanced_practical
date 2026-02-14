@@ -16,7 +16,7 @@ node {
         echo 'Scripted Pipeline Completed Successfully.'
     }
     stage('Archive') {
-        sh 'echo "Scripted Artifact" > scripted_artifact.txt'
+        bat 'echo "Scripted Artifact" > scripted_artifact.txt'
         archiveArtifacts artifacts: 'scripted_artifact.txt', fingerprint: true
     }
 }
